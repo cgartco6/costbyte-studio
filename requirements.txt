@@ -1,0 +1,10 @@
+fastapi==0.115.0
+uvicorn==0.30.6
+weasyprint==62.3          # PDF from HTML
+reportlab==4.2.2          # fallback PDF
+apscheduler==3.10.4       # VAT cron
+stripe==10.8.0
+payfast-python==0.1.2     # if available, or custom requests
+python-dotenv==1.0.1
+sqlmodel==0.0.18          # ORM
+supabase==2.4.0           # client
