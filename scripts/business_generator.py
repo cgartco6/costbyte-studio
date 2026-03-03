@@ -30,3 +30,7 @@ with open(f"generated_sites/{site_name}/index.html", "w", encoding="utf-8") as f
 
 print(f"✅ Generated full site at generated_sites/{site_name}/")
 print("Next: python scripts/deploy.py to push to YOUR free Netlify/Render/Vercel")
+
+# After site generation:
+print("Calling studios for full branding/marketing/design...")
+os.system("python scripts/studio_generator.py")  # Or subprocess call with params
