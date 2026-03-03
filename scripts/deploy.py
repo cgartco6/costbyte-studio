@@ -16,3 +16,8 @@ if response.status_code == 201:
     print("80/20 payout logic already wired in backend/services/payment.py")
 else:
     print("Error – check token")
+# ... (previous Netlify code)
+print("Primary: Netlify/Vercel/Render")
+print("Fallback: Oracle Always Free VM or Afrihost shared (manual upload)")
+print("- Oracle: Use OCI SDK → spin Arm VM (4 OCPU/24GB free)")
+print("- Afrihost: Upload ZIP to cPanel File Manager + create MySQL DB")
