@@ -34,3 +34,14 @@ print("Next: python scripts/deploy.py to push to YOUR free Netlify/Render/Vercel
 # After site generation:
 print("Calling studios for full branding/marketing/design...")
 os.system("python scripts/studio_generator.py")  # Or subprocess call with params
+# ... (previous code after site generation)
+print("Generating deliverables: PDF pack + ZIP bundle...")
+pdf_bytes = generate_pdf_from_html("<h1>Test Story</h1><p>Lekker nag stories...</p>")
+with open("generated/deliverables/story_pack.pdf", "wb") as f:
+    f.write(pdf_bytes)
+
+zip_buffer = create_zip_from_files(["generated/deliverables/story_pack.pdf", "generated_sites/site/index.html"])
+with open("generated/deliverables/full_pack.zip", "wb") as f:
+    f.write(zip_buffer.getvalue())
+
+print("✅ PDF & ZIP ready for download in client dashboard")
