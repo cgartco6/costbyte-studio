@@ -45,3 +45,7 @@ with open("generated/deliverables/full_pack.zip", "wb") as f:
     f.write(zip_buffer.getvalue())
 
 print("✅ PDF & ZIP ready for download in client dashboard")
+# After generation
+if business_days_old > 60 and revenue_last_60_days < 500:
+    print("Activating fallback: R99/month subscription required for full features")
+    # In real app: create Stripe/PayFast subscription link
