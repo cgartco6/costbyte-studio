@@ -8,6 +8,3 @@ python-dotenv
 stripe
 requests
 cryptography
-elevenlabs
-stability-sdk
-runwayml-sdk
